@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
  <head>
-<meta charset="utf-8">
-<title>GPS</title>
+    <meta charset="utf-8">
+    <title>Тег INPUT</title>
  </head>
  <body>
 <input type="button" value="GPS SHOW" name="a" OnClick="a();">
@@ -22,9 +22,9 @@ if(navigator.geolocation) {
         console.log(latitude);
         console.log(longitude);
         document.write('<input id="input" type="text" style="color:red;" value="',latitude,' ',longitude,'"></input>');
-        document.write('<input id="copy" type="button" value="Êîïèðîâàòü" onClick="copy();">');
-        document.write('<p style="color:blue;">Åñëè õî÷åøü òî ñòðàâü ýòè(^) çíà÷åíèÿ â Google maps è óçíàé ãäå òû ñåé÷àñ</p>');
-        document.write('<input type="button" value="Êíîïêà" onClick="b();">');
+        document.write('<input id="copy" type="button" value="Копировать" onClick="copy();">');
+        document.write('<p style="color:blue;">Если хочешь то стравь эти(^) значения в Google maps и узнай где ты сейчас</p>');
+        document.write('<input type="button" value="Кнопка" onClick="b();">');
                                     });
                            }
 }
