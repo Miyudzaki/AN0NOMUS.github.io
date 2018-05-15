@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+<title>Тег INPUT</title>
+ </head>
+ <body>
+<input type="button" value="GPS SHOW" name="a" OnClick="a();">
+<script>
+function copy() {
+          var copyText = document.querySelector("#input");
+          copyText.select();
+          document.execCommand("copy");
+document.querySelector("#copy").addEventListener("click", copy);
+               }
+function a()
+{
+if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        console.log(latitude);
+        console.log(longitude);
+        document.write('<input id="input" type="text" style="color:red;" value="',latitude,' ',longitude,'"></input>');
+        document.write('<input id="copy" type="button" value="Копировать" onClick="copy();">');
+        document.write('<p style="color:blue;">Если хочешь то стравь эти(^) значения в Google maps и узнай где ты сейчас</p>');
+        document.write('<input type="button" value="Кнопка" onClick="b();">');
+                                    });
+                           }
+}
+
+function b()
+{
+  location.href=('https://www.google.ru/maps');
+}
+</script>
+ </body>
+</html>
